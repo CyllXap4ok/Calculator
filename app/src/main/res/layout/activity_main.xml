@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_tint"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bClear"
+                style="@style/numButton"
+                android:onClick="onClickClear"
+                android:text="@string/clear"
+                android:textColor="@color/light_green"
+                app:rippleColor="@color/ripple_gray" />
+
+            <Button
+                android:id="@+id/bMultiplyOperator"
+                style="@style/numButton"
+                android:onClick="onClickOperator"
+                android:text="@string/times"
+                android:textColor="@color/light_green"
+                app:rippleColor="@color/ripple_gray" />
+
+            <Button
+                android:id="@+id/bDivideOperator"
+                style="@style/numButton"
+                android:onClick="onClickOperator"
+                android:text="@string/div"
+                android:textColor="@color/light_green"
+                app:rippleColor="@color/ripple_gray" />
+
+            <Button
+                android:id="@+id/bDelete"
+                style="@style/numButton"
+                android:foreground="@drawable/delete_sign"
+                android:foregroundTint="@color/light_green"
+                android:onClick="onClickDelete"
+                android:scaleX="0.9"
+                android:scaleY="0.9"
+                android:text="@string/delete"
+                android:textColorHighlight="@color/ripple_gray"
+                android:textSize="0sp"
+                app:rippleColor="@color/ripple_gray" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bNumberOne"
+                style="@style/numButton"
+                android:onClick="onClickDigit"
+                android:text="@string/_1"
+                app:rippleColor="@color/ripple_gray" />
+
+            <Button
+                android:id="@+id/bNumberTwo"
+                style="@style/numButton"
+                android:onClick="onClickDigit"
+                android:text="@string/_2"
+                app:rippleColor="@color/ripple_gray" />
+
+            <Button
+                android:id="@+id/bNumberThree"
+                style="@style/numButton"
+                android:onClick="onClickDigit"
+                android:text="@string/_3"
+                app:rippleColor="@color/ripple_gray" />
+
+            <Button
+                android:id="@+id/bPlusOperator"
+                style="@style/numButton"
+                android:onClick="onClickOperator"
+                android:text="@string/plus"
+                android:textColor="@color/light_green"
+                app:rippleColor="@color/ripple_gray" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bNumberFour"
+                style="@style/numButton"
+                android:onClick="onClickDigit"
+                android:text="@string/_4"
+                app:rippleColor="@color/ripple_gray" />
+
+            <Button
+                android:id="@+id/bNumberFive"
+                style="@style/numButton"
+                android:onClick="onClickDigit"
+                android:text="@string/_5"
+                app:rippleColor="@color/ripple_gray" />
+
+            <Button
+                android:id="@+id/bNumberSix"
+                style="@style/numButton"
+                android:onClick="onClickDigit"
+                android:text="@string/_6"
+                app:rippleColor="@color/ripple_gray" />
+
+            <Button
+                android:id="@+id/bMinusOperator"
+                style="@style/numButton"
+                android:onClick="onClickOperator"
+                android:text="@string/minus"
+                android:textColor="@color/light_green"
+                app:rippleColor="@color/ripple_gray" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bNumberSeven"
+                style="@style/numButton"
+                android:onClick="onClickDigit"
+                android:text="@string/_7"
+                app:rippleColor="@color/ripple_gray" />
+
+            <Button
+                android:id="@+id/bNumberEight"
+                style="@style/numButton"
+                android:onClick="onClickDigit"
+                android:text="@string/_8"
+                app:rippleColor="@color/ripple_gray" />
+
+            <Button
+                android:id="@+id/bNumberNine"
+                style="@style/numButton"
+                android:onClick="onClickDigit"
+                android:text="@string/_9"
+                app:rippleColor="@color/ripple_gray" />
+
+            <Button
+                android:id="@+id/bComma"
+                style="@style/numButton"
+                android:onClick="onClickComma"
+                android:text="@string/comma"
+                android:textColor="@color/light_green"
+                app:rippleColor="@color/ripple_gray" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bLeftBracket"
+                style="@style/numButton"
+                android:onClick="onClickLeftBracket"
+                android:text="@string/left_bracket"
+                android:textColor="@color/light_green"
+                app:rippleColor="@color/ripple_gray" />
+
+            <Button
+                android:id="@+id/bNumberZero"
+                style="@style/numButton"
+                android:onClick="onClickDigit"
+                android:text="@string/_0"
+                app:rippleColor="@color/ripple_gray" />
+
+            <Button
+                android:id="@+id/bRightBracket"
+                style="@style/numButton"
+                android:onClick="onClickRightBracket"
+                android:text="@string/right_bracket"
+                android:textColor="@color/light_green"
+                app:rippleColor="@color/ripple_gray" />
+
+            <Button
+                android:id="@+id/bResult"
+                style="@style/numButton"
+                android:backgroundTint="@color/light_green"
+                android:onClick="onClickResult"
+                android:text="@string/res"
+                app:rippleColor="@color/ripple_green" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/dark_background_tint"
+        app:layout_constraintBottom_toTopOf="@+id/guideline7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.96" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.04" />
+
+        <TextView
+            android:id="@+id/tInput"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ellipsize="start"
+            android:gravity="center|end"
+            android:singleLine="true"
+            android:textColor="@color/button_text_color"
+            android:textSize="48sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toTopOf="@+id/guideline2" />
+
+        <TextView
+            android:id="@+id/tResult"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:ellipsize="end"
+            android:gravity="end"
+            android:singleLine="true"
+            android:textColor="@color/button_text_color"
+            android:textSize="26sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline4"
+            app:layout_constraintStart_toStartOf="@+id/guideline5"
+            app:layout_constraintTop_toTopOf="@+id/guideline" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.75" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.4" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.45" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.98" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="button_text_color">#FFD2D2D2</color>
+    <color name="dark_background_tint">#1B1B1B</color>
+    <color name="background_tint">#2D2D2D</color>
+    <color name="ripple_gray">#3A3A3A</color>
+    <color name="logo_foreground1">#599A4E</color>
+    <color name="light_green">#26B100</color>
+    <color name="ripple_green">#1C8300</color>
+    <color name="logo_foreground2">#F39746</color>
+</resources>

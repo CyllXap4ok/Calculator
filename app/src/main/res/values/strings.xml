@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="_0" translatable="false">0</string>
+    <string name="_1" translatable="false">1</string>
+    <string name="_2" translatable="false">2</string>
+    <string name="_3" translatable="false">3</string>
+    <string name="_4" translatable="false">4</string>
+    <string name="_5" translatable="false">5</string>
+    <string name="_6" translatable="false">6</string>
+    <string name="_7" translatable="false">7</string>
+    <string name="_8" translatable="false">8</string>
+    <string name="_9" translatable="false">9</string>
+    <string name="comma" translatable="false">,</string>
+    <string name="times" translatable="false">×</string>
+    <string name="div" translatable="false">÷</string>
+    <string name="plus" translatable="false">+</string>
+    <string name="minus" translatable="false">-</string>
+    <string name="res" translatable="false">=</string>
+    <string name="delete" translatable="false">delete</string>
+    <string name="clear" translatable="false">C</string>
+    <string name="left_bracket" translatable="false">(</string>
+    <string name="right_bracket" translatable="false">)</string>
+    <string name="arithmetical_exception">You can\'t divide by zero!</string>
+</resources>
