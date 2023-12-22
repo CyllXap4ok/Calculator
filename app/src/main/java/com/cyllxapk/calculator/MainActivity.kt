@@ -10,60 +10,54 @@ import com.cyllxapk.calculator.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var mainView: ActivityMainBinding
-    private lateinit var screenInput: ScreenInput
+    lateinit var expressionEntering: ExpressionEntering
 
     @SuppressLint("SourceLockedOrientationActivity")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         mainView = ActivityMainBinding.inflate(layoutInflater)
         setContentView(mainView.root)
-
-        Constants.res = applicationContext.resources
-        screenInput = ScreenInput(applicationContext)
         this.requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
+
+        Component().inject(this)
+
+        mainView.apply {
+
+            bComma.setOnClickListener {
+                expressionEntering.printComma(bComma.text.toString(), expressionInput, expressionResult)
+            }
+
+            bLeftBracket.setOnClickListener {
+                expressionEntering.printLeftBracket(bLeftBracket.text.toString(), expressionInput, expressionResult)
+            }
+
+            bRightBracket.setOnClickListener {
+                expressionEntering.printRightBracket(bRightBracket.text.toString(), expressionInput, expressionResult)
+            }
+
+            bDelete.setOnClickListener {
+                expressionEntering.deleteLast(expressionInput, expressionResult)
+            }
+
+            bClear.setOnClickListener {
+                expressionEntering.clearAll(expressionInput, expressionResult)
+            }
+
+            bResult.setOnClickListener {
+                expressionEntering.setResult(expressionInput, expressionResult)
+            }
+
+        }
     }
 
     fun onClickDigit(button: View) {
         button as Button
-        screenInput.printDigit(button.text[0])
-        screenInput.setText(mainView.tInput, mainView.tResult)
+        expressionEntering.printDigit(button.text.toString(), mainView.expressionInput, mainView.expressionResult)
     }
 
     fun onClickOperator(button: View) {
         button as Button
-        screenInput.printOperator(button.text[0])
-        screenInput.setText(mainView.tInput, mainView.tResult)
+        expressionEntering.printOperator(button.text.toString(), mainView.expressionInput, mainView.expressionResult)
     }
 
-    fun onClickComma(button: View) {
-        button as Button
-        screenInput.printComma(button.text[0])
-        screenInput.setText(mainView.tInput, mainView.tResult)
-    }
-
-    fun onClickLeftBracket(button: View) {
-        button as Button
-        screenInput.printLeftBracket(button.text[0])
-        screenInput.setText(mainView.tInput, mainView.tResult)
-    }
-
-    fun onClickRightBracket(button: View) {
-        button as Button
-        screenInput.printRightBracket(button.text[0])
-        screenInput.setText(mainView.tInput, mainView.tResult)
-    }
-
-    fun onClickDelete(v: View) {
-        screenInput.delete()
-        screenInput.setText(mainView.tInput, mainView.tResult)
-    }
-
-    fun onClickClear(v: View) {
-        screenInput.clear()
-        screenInput.setText(mainView.tInput, mainView.tResult)
-    }
-
-    fun onClickResult(v: View) {
-        screenInput.result(mainView.tInput, mainView.tResult)
-    }
 }

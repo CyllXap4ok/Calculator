@@ -25,7 +25,6 @@
             <Button
                 android:id="@+id/bClear"
                 style="@style/numButton"
-                android:onClick="onClickClear"
                 android:text="@string/clear"
                 android:textColor="@color/light_green"
                 app:rippleColor="@color/ripple_gray" />
@@ -51,7 +50,6 @@
                 style="@style/numButton"
                 android:foreground="@drawable/delete_sign"
                 android:foregroundTint="@color/light_green"
-                android:onClick="onClickDelete"
                 android:scaleX="0.9"
                 android:scaleY="0.9"
                 android:text="@string/delete"
@@ -165,7 +163,6 @@
             <Button
                 android:id="@+id/bComma"
                 style="@style/numButton"
-                android:onClick="onClickComma"
                 android:text="@string/comma"
                 android:textColor="@color/light_green"
                 app:rippleColor="@color/ripple_gray" />
@@ -181,7 +178,6 @@
             <Button
                 android:id="@+id/bLeftBracket"
                 style="@style/numButton"
-                android:onClick="onClickLeftBracket"
                 android:text="@string/left_bracket"
                 android:textColor="@color/light_green"
                 app:rippleColor="@color/ripple_gray" />
@@ -196,7 +192,6 @@
             <Button
                 android:id="@+id/bRightBracket"
                 style="@style/numButton"
-                android:onClick="onClickRightBracket"
                 android:text="@string/right_bracket"
                 android:textColor="@color/light_green"
                 app:rippleColor="@color/ripple_gray" />
@@ -205,7 +200,6 @@
                 android:id="@+id/bResult"
                 style="@style/numButton"
                 android:backgroundTint="@color/light_green"
-                android:onClick="onClickResult"
                 android:text="@string/res"
                 app:rippleColor="@color/ripple_green" />
 
@@ -237,7 +231,7 @@
             app:layout_constraintGuide_percent="0.04" />
 
         <TextView
-            android:id="@+id/tInput"
+            android:id="@+id/expressionInput"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:ellipsize="start"
@@ -251,7 +245,7 @@
             app:layout_constraintTop_toTopOf="@+id/guideline2" />
 
         <TextView
-            android:id="@+id/tResult"
+            android:id="@+id/expressionResult"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:ellipsize="end"
