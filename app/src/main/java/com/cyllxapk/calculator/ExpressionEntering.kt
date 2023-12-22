@@ -17,7 +17,6 @@ class ExpressionEntering(val res: Resources) {
             expressionInput =
                 if (!it.isZeroFirst() || it.containsComma()) expressionInput + btnText
                 else expressionInput.dropLast(1) + btnText
-
         }
 
         setText(inputView, resultView)
@@ -27,11 +26,12 @@ class ExpressionEntering(val res: Resources) {
 
         expressionInput.let {
 
-            if (
-                it.lastIsDigit() || it.lastIsRightBracket() ||
+            if (it.lastIsDigit() || it.lastIsRightBracket() ||
                 btnText == res.getString(R.string.minus) && (it.isEmpty() || it.lastIsLeftBracket())
-                ) { expressionInput += btnText }
+                ) {
 
+                expressionInput += btnText
+            }
         }
 
         setText(inputView, resultView)
@@ -40,9 +40,7 @@ class ExpressionEntering(val res: Resources) {
     fun printComma(btnText: String, inputView: TextView, resultView: TextView) {
 
         findLastNumber(expressionInput).let {
-
             if (it.lastIsDigit() && !it.containsComma()) expressionInput += btnText
-
         }
 
         setText(inputView, resultView)
@@ -50,11 +48,7 @@ class ExpressionEntering(val res: Resources) {
 
     fun printLeftBracket(btnText: String, inputView: TextView, resultView: TextView) {
 
-        expressionInput.let {
-
-            if (it.isEmpty() || !it.lastIsComma()) expressionInput += btnText
-
-        }
+        expressionInput.let { if (it.isEmpty() || !it.lastIsComma()) expressionInput += btnText }
 
         setText(inputView, resultView)
     }
@@ -76,7 +70,6 @@ class ExpressionEntering(val res: Resources) {
                 expressionResult = ""
 
             }
-
         }
 
         setText(inputView, resultView)
@@ -135,6 +128,7 @@ class ExpressionEntering(val res: Resources) {
 
         for (i in str.length - 1 downTo 0) {
             if (str[i].isDigit() || str[i].isComma()) num = str[i] + num
+            else break
         }
 
         return num
